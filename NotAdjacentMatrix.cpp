@@ -805,7 +805,7 @@ void binarybeast880()
 {
  ll n;
  cin >> n;
- if (n % 2 == false)
+ if (n == 2)
  {
   cout << -1 << endl;
   return;
@@ -822,6 +822,14 @@ void binarybeast880()
  }
  f(i, 0, n)
  {
+  f(j, 0, n)
+  {
+   if ((i + j) % 2)
+    swap(a[i][n - j], a[i][j]);
+  }
+ }
+ f(i, 0, n)
+ {
   f(j, 0, n) cout << a[i][j] << " ";
   cout << endl;
  }
@@ -834,6 +842,17 @@ void binarybeast880()
  0    0    0    0    0
  0    0    0    0    0
  0    0    0    0    0
+
+
+
+ 1  6  2      1  2  3
+ 7  3  8      4  5  6
+ 4  9  5      7  8  9
+
+
+
+
+
 
  */
 }
